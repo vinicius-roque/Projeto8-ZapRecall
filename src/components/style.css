@@ -1,19 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CASL,CRSV,MONO@300,0,0.5,0;345,1,1,1;400,0,0.5,0;500,0,0.5,0;600,0,0.5,0;700,0,0.5,0&display=swap');
+
 @media (max-width: 614px) {
-    * {
-        box-sizing: border-box;
-    }
-    
     body {
         background-color: #FB6B6B;
+        font-family: 'Recursive', sans-serif;
+        font-weight: 400;
+        color: #333333;
     }
     
+    h1 {
+        margin: 25px 0 42px 0;
+        font-size: 36px;
+        font-family: 'Righteous', cursive;
+        color: #ffffff;
+    }
+
     .boasVindas {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
-        margin-top: 172px;
+        min-height: 100vh;
     }
 
     .boasVindas img {
@@ -22,14 +30,7 @@
         margin-bottom: 30px;
     }
 
-    .boasVindas h1 {
-        font-family: 'Righteous', cursive;
-        font-size: 36px;
-        color: #FFFFFF;
-        margin-bottom: 40px;
-    } 
-
-    .botao {
+    .boasVindas button {
         font-family: 'Recursive', sans-serif;
         background-color: #FFFFFF;
         width: 246px;
@@ -38,9 +39,7 @@
         border: solid 1px #D70900;
         color: #D70900;
         font-size: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        font-weight: 400;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         cursor: pointer;
     }
@@ -81,6 +80,7 @@
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background-color: #FFFFFF;
         margin: 20px auto auto auto;
+        overflow-y: scroll;
     }
 
     .perguntas img {

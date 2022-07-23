@@ -1,24 +1,15 @@
 import React from 'react';
 import BoasVindas from "./BoasVindas";
-import TelaFlashcards from "./TelaFlashcards";
+import Perguntas from "./Perguntas";
 import './style.css';
 import './reset.css';
 
 export default function App() {
-    const [tela, setTela] = React.useState(true);
+    const [isStarted, setIsStarted] = React.useState(false);
     
     return (
         <>
-            <div>
-                {tela ? (
-                    <div className="centralizar">
-                        <BoasVindas />
-                        <div className="botao" onClick={() => setTela(!tela)}>Iniciar Recall!</div>
-                    </div>
-                ) : (
-                    <TelaFlashcards />
-                )}
-            </div>
+            {isStarted ? <Perguntas /> : <BoasVindas setIsStarted={setIsStarted}/>}
         </>
     );
 }
