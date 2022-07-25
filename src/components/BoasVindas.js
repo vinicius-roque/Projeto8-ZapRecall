@@ -1,13 +1,11 @@
-import logo from '../assets/logo.png';
-import './style.css';
+import logo from "../assets/logo.png";
 
-export default function BoasVindas({setIsStarted}) {
-    
+export default function BoasVindas({ setComeco }) {
     return (
         <div className="boasVindas">
-            <img src={logo} alt="logo"/>
+            <img src={logo} alt="Logo" />
             <h1>ZapRecall</h1>
-            <button onClick={() => setIsStarted(true)}>Iniciar Recall!</button>
+            <button onClick={() => setComeco(true)}>Iniciar Recall!</button>
         </div>
-    );
+    )
 }

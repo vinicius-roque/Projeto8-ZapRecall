@@ -7,109 +7,220 @@
         font-family: 'Recursive', sans-serif;
         font-weight: 400;
         color: #333333;
+        height: 850px;
+    }
+
+    .boasVindas {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
-    h1 {
+    .boasVindas h1 {
         margin: 25px 0 42px 0;
         font-size: 36px;
         font-family: 'Righteous', cursive;
         color: #ffffff;
     }
 
-    .boasVindas {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
     .boasVindas img {
         width: 136px;
         height: 161px;
-        margin-bottom: 30px;
     }
-
+    
     .boasVindas button {
-        font-family: 'Recursive', sans-serif;
-        background-color: #FFFFFF;
         width: 246px;
         height: 54px;
-        border-radius: 5px;
-        border: solid 1px #D70900;
-        color: #D70900;
         font-size: 18px;
         font-weight: 400;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: 'Recursive', sans-serif;
+        background-color: #ffffff;
+        color: #D70900;
+        border: 1px solid #D70900;
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
         cursor: pointer;
     }
-
-    .centralizar {
+    
+    .jogo {
+        width: 100%;
+        min-height: 100vh;
         display: flex;
-        align-items: center;
         flex-direction: column;
-    }
-
-    .topo {
-        display: flex;
-        justify-content: center;
         align-items: center;
-        width: 255.61px;
-        height: 60px;
-        margin: 40px auto 50px auto;
     }
-
+    
+    .jogo .topo {
+        margin: 51px 0;
+        display: flex;
+        align-items: center;
+    }
+    
     .topo img {
         width: 52px;
-        margin-right: 20px;
+        height: 60px;
     }
-
-    .topo h2 {
+    
+    .topo h1 {
         font-family: 'Righteous', cursive;
         font-size: 36px;
         color: #FFFFFF;
+        margin: 0 0 0 20px;
     }
-
-    .perguntas {
+    
+    .jogo ul {
+        margin-bottom: 80px;
+    }
+    
+    .jogo ul li {
+        width: 300px;
+        height: 65px;
+        padding: 0 15px;
+        margin-bottom: 25px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 300px;
-        height: 65px;
-        border-radius: 5px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         background-color: #FFFFFF;
-        margin: 20px auto auto auto;
-        overflow-y: scroll;
+        border-radius: 5px;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
     }
-
-    .perguntas img {
-        margin-right: 15px;
-    }
-
-    .perguntas p {
+    
+    .pergunta h3 {
         font-family: 'Recursive', sans-serif;
         font-size: 16px;
         font-weight: bold;
-        color: #333333;
-        margin-left: 15px;
     }
-
-    .borda {
-        background-color: #FFFFFF;
+    
+    .pergunta ion-icon {
+        font-size: 23px;
+        font-weight: 700;
+    }
+    
+    footer {
         width: 100%;
-        height: 70px;
+        min-height: 70px;
+        font-size: 18px;
+        background-color: #FFFFFF;
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         position: fixed;
         bottom: 0;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+        left: 0;
     }
 
-    .borda p {
+    .resultado {
+        font-family: 'Recursive', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    footer > p {
+        margin-top: 15px;
+    }
+    
+    footer div {
+        margin-top: 5px;
+        display: flex;
+    }
+    
+    footer ion-icon {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+    
+    .card {
+        padding: 18px 15px 6px 15px;
+        margin-bottom: 25px;
+        width: 300px;
+        min-height: 130px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #FFFFD4;
+        border-radius: 5px;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    }
+    
+    .card p {
         font-family: 'Recursive', sans-serif;
         font-size: 18px;
-        color: #333333;
+    }
+    
+    .card img {
+        width: 30px;
+        height: 20px;
+        margin-left: auto;
+        cursor: pointer;
+    }
+    
+    .botoesZap {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .botoesZap button {
+        font-family: 'Recursive', sans-serif;
+        width: 86px;
+        height: 37px;
+        padding: 0 12px;
+        font-size: 12px;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .botoesZap button[name="errado"] {
+        background-color: #FF3030;
+    }
+    
+    .botoesZap button[name="quase"] {
+        background-color: #FF922E;
+    }
+    
+    .botoesZap button[name="certo"] {
+        background-color: #2FBE34;
+    }
+    
+    .pergunta:last-child, .card:last-child {
+        margin-bottom: 120px;
+    }
+    
+    .errado {
+        color: #FF3030;
+        text-decoration-line: line-through;
+    }
+    
+    .quase {
+        color: #FF922E;
+        text-decoration-line: line-through;
+    }
+    
+    .certo {
+        color: #2FBE34;
+        text-decoration-line: line-through;
+    }
+    
+    .situacaoResultado {
+        width: 222px;
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 21px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .situacaoResultado b {
+        font-weight: 700;
+        margin-bottom: 15px;
     }
 }

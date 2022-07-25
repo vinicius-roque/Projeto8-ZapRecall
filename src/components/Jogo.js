@@ -1,10 +1,10 @@
 import React from "react";
-import Topo from "./Topo";
 import Perguntas from "./Perguntas";
-import Resultados from "./Resultados";
+import Topo from "./Topo";
+import Resultado from "./Resultado";
 
 export default function Jogo() {
-    const cards = [
+    const todosOsCads = [
         {
             pergunta: "O que é JSX?",
             resposta: "Uma extensão de linguagem do JavaScript"
@@ -34,38 +34,43 @@ export default function Jogo() {
             resposta: "passar diferentes informações para componentes"
         },
         {
-            pergunta: "Usamos estado(state) para:",
-            resposta: "dizer para o React quais informações, quando atualizadas, devem renderizar a tela novamente"
-        }
+            pergunta: "Usamos estado (state) para:",
+            resposta: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
+        },
     ];
 
-    function embaralharPerguntas(array) {
+    function embaralharArray(array) {
         array.sort(() => Math.random() - 0.5);
     }
 
-    embaralharPerguntas(cards)
+    embaralharArray(todosOsCads);
+    const [cards] = React.useState([...todosOsCads]);
 
     const [resultados, setResultados] = React.useState([]);
     const [cardSelecionado, setCardSelecionado] = React.useState(false);
+    const [cardConteudo, setCardConteudo] = React.useState(0);
 
     return (
         <div className="jogo">
             <Topo />
+
             <ul>
                 {cards.map((card, index) => {
-                    return <Perguntas
+                    return <Perguntas 
+                        key={index + 1}
                         index={index + 1}
-                        pergunta={card.pergunta}
-                        resposta={card.resposta}
+                        cardConteudo={cardConteudo}
+                        setCardConteudo={setCardConteudo}
+                        cards={cards}
                         resultados={resultados}
                         setResultados={setResultados}
                         cardSelecionado={cardSelecionado}
                         setCardSelecionado={setCardSelecionado}
-                    />
+                    />;
                 })}
             </ul>
 
-            <Resultados numeroCards={cards.length} resultados={resultados} />
+            <Resultado numeroCards={cards.length} resultados={resultados} />
         </div>
-    );
+    )
 }
